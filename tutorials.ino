@@ -1,27 +1,32 @@
+
+//////////////////// Project 6 ////////////////////
+
+
+
 //////////////////// Project 5 ////////////////////
-#include <Servo.h>
+// #include <Servo.h>
 
-Servo myServo;
+// Servo myServo;
 
-const int potPin = A0;
-int potVal;
-int angle;
+// const int potPin = A0;
+// int potVal;
+// int angle;
 
-void setup() {
-  myServo.attach(9);
-  Serial.begin(9600);
-}
+// void setup() {
+//   myServo.attach(9);
+//   Serial.begin(9600);
+// }
 
-void loop() {
-  potVal = analogRead(potPin);
-  Serial.print("potVal: ");
-  Serial.print(potVal);
-  angle = map(potVal, 0, 1023, 0, 179);
-  Serial.print(", angle: ");
-  Serial.println(angle);
-  myServo.write(angle);
-  delay(15);
-}
+// void loop() {
+//   potVal = analogRead(potPin);
+//   Serial.print("potVal: ");
+//   Serial.print(potVal);
+//   angle = map(potVal, 0, 1023, 0, 179);
+//   Serial.print(", angle: ");
+//   Serial.println(angle);
+//   myServo.write(angle);
+//   delay(15);
+// }
 
 //////////////////// Project 4 ////////////////////
   // const int redSensorPin = A0;

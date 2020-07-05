@@ -1,33 +1,59 @@
+//////////////////// Project 7 ////////////////////
+
+
+
+
 
 //////////////////// Project 6 ////////////////////
-int sensorValue;
-int sensorLow = 1023;
-int sensorHigh = 0;
+// First code: Potentiometer ver.
+// Second code: Phototransistor ver.
 
-const int ledPin = 13;
-void setup() {
-  pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin, HIGH);
+// int potVal;
 
-  while (millis() < 5000) {
-    sensorValue = analogRead(A0);
-    if (sensorValue < sensorLow) {
-      sensorLow = sensorValue;
-    }
-    if (sensorValue > sensorHigh) {
-      sensorHigh = sensorValue;
-    }
-  }
-  digitalWrite(ledPin, LOW);
-}
+// void setup() {
+//   Serial.begin(9600);
+// }
 
-void loop() {
-  snesorValue = analogRead(A0);
-  int pitch = map(sensorValue, sensorLow, sensorHigh, 50, 4000);
-  tone(8, pitch, 20);
-  delay(10);
-}
+// void loop() {
+//   potVal = analogRead(A0); 
+//   Serial.println(potVal);
+//   int pitch = map(potVal, 0, 1023, 50, 4000);
+//   tone(9, pitch, 20);
+//   delay(10);
+// }
 
+//============================================= 
+
+// int sensorValue;
+// int sensorLow = 1023;
+// int sensorHigh = 0;
+
+// const int ledPin = 13;
+
+// void setup() {
+//   pinMode(ledPin, OUTPUT);
+//   digitalWrite(ledPin, HIGH);
+//   Serial.begin(9600);
+
+//   while (millis() < 5000) {
+//     sensorValue = analogRead(A0);
+//     if (sensorValue < sensorLow) {
+//       sensorLow = sensorValue;
+//     }
+//     if (sensorValue > sensorHigh) {
+//       sensorHigh = sensorValue;
+//     }
+//   }
+//   digitalWrite(ledPin, LOW);
+// }
+
+// void loop() {
+//   sensorValue = analogRead(A0); 
+//   int pitch = map(sensorValue, sensorLow, sensorHigh, 50, 2000);
+//   tone(9, pitch, 20);
+//   delay(10);
+
+// }
 
 //////////////////// Project 5 ////////////////////
 // #include <Servo.h>
